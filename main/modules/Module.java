@@ -1,58 +1,47 @@
 package mc_Dawn.main.modules;
 
+import mc_Dawn.main.Dawn;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.play.server.SPacketChat;
 
 public class Module {
 	protected Minecraft mc = Minecraft.getMinecraft();
 	
-	private String name;
+	private String name, displayName;
 	private int key;
 	private boolean toggled;
 	private Category category;
 	
-	public Module(String nm, int i, Category c) {
-		name = nm;
-		key = i;
-		category = c;
+	public Module(String name, int key, Category category) {
+		this.name = name;
+		this.key = key;
+		this.category = category;
 		toggled = false;
 	}
 	
+	public void onEnable() {Dawn.instance.eventManager.register(this);}
+	public void onDisable() {Dawn.instance.eventManager.unregister(this);}
+	
+	public void onToggle() {}
 	public void toggle() {
 		toggled = !toggled;
-		
-		if(toggled) {
+		onToggle();
+		if(toggled)
 			onEnable();
-		} else {
+		else
 			onDisable();
-		}
 	}
 	
-	public void onEnable() {}
-	public void onDisable() {}
-	public void onUpdate() {}
-	public void onRender() {}
-
-	public Minecraft getMc() {
-		return mc;
-	}
-
-	public void setMc(Minecraft mc) {
-		this.mc = mc;
-	}
-
 	public String getName() {
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	
 	public int getKey() {
 		return key;
 	}
-
 	public void setKey(int key) {
 		this.key = key;
 	}
@@ -60,24 +49,14 @@ public class Module {
 	public Category getCategory() {
 		return category;
 	}
-	
 	public void setCategory(Category category) {
 		this.category = category;
 	}
-
-	public boolean isToggled() {
-		return toggled;
-	}
-
-	public void setToggled(boolean toggled) {
-		this.toggled = toggled;
-	}
-
-	public boolean onSendChatMessage(String s){
-		  return true;
-	}
 	
-	 public boolean onRecieveChatMessage(SPacketChat packet){
-		  return true;
+	public String getDisplayName() {
+		return displayName == null ? name : displayName;
+	}
+	public void setDisplayName(String displayName) {
+		this.displayName = displayName;
 	}
 }
