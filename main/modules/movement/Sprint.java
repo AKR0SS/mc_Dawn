@@ -10,9 +10,9 @@ public class Sprint extends Module {
 		super("Sprint", Keyboard.KEY_Z, Category.MOVEMENT);
 	}
 	
-	@EventTarget
+	/*@EventTarget
 	public void onUpdate(EventUpdate event) {
 		if(!mc.player.isCollidedHorizontally && mc.player.moveForward > 0)
 			mc.player.setSprinting(true);
-	}
+	}*/
 }

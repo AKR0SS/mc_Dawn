@@ -2,18 +2,16 @@ package mc_Dawn.main;
 
 import org.lwjgl.opengl.Display;
 
+import mc_Dawn.main.event.EventManager;
+
 public class Dawn {
 	public String Title = "1.12.2 Dawn Client",
 				  Version = "0.1",
 				  Author = "AKROSS";
 	
-	public static Dawn instance = new Dawn();
+	public EventManager eventManager;
 	
 	public void startClient() {
-		System.out.println("\n" + "[" + Title + "] Starting . . . . . . ." + 
-				   		   "\n" + "v" + Version + 
-				   		   "\n" + "Created by " + Author);
-
-		Display.setTitle(Title + " v" + Version);
+		eventManager = new EventManager();
 	}
 }
