@@ -62,4 +62,6 @@ public class Module {
 	public void setDisplayName(String displayName) {
 		this.displayName = displayName;
 	}
+	
+	public void setup() {}
 }
