@@ -5,5 +5,5 @@
 * OptiFine 1.12.2 HD U F5
 * Simple bypasses
 
-## This Github is for tracking personal progression
-## it is NOT playable from download sorry :)
+**This Github is for tracking personal progression**
+**it is NOT playable from download sorry :)**
