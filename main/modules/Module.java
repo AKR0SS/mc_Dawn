@@ -31,6 +31,9 @@ public class Module {
 		else
 			onDisable();
 	}
+	public boolean isToggled() {
+		return toggled;
+	}
 	
 	public String getName() {
 		return name;
