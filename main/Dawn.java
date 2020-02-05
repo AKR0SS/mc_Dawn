@@ -2,6 +2,7 @@ package mc_Dawn.main;
 
 import org.lwjgl.opengl.Display;
 
+import de.Hero.clickgui.ClickGUI;
 import de.Hero.settings.SettingsManager;
 import mc_Dawn.main.event.EventManager;
 import mc_Dawn.main.event.EventTarget;
@@ -18,12 +19,13 @@ public class Dawn {
 	public SettingsManager settingsManager;
 	public EventManager eventManager;
 	public ModuleManager moduleManager;
+	public ClickGUI clickGui;
 	
 	public void startClient() {
 		settingsManager = new SettingsManager();
 		eventManager = new EventManager();
 		moduleManager = new ModuleManager();
-		
+		clickGui = new ClickGUI();
 		
 		System.out.println("[" + Title + "] Starting . . . . . . ." + 
 				   "\n" + "v" + Version + 
