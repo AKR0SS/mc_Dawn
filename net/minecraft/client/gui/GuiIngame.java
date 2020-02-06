@@ -212,7 +212,7 @@ public class GuiIngame extends Gui
         
         //Dawn
         Event2D event2D = new Event2D(scaledresolution.getScaledWidth(), scaledresolution.getScaledHeight());
-        event2D.call();
+        event2D.call(); 
 
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
         this.mc.getTextureManager().bindTexture(ICONS);
