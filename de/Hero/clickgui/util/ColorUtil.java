@@ -14,6 +14,8 @@ import mc_Dawn.main.Dawn;
 public class ColorUtil {
 	
 	public static Color getClickGUIColor(){
-		return new Color((int)Dawn.instance.settingsManager.getSettingByName("GuiRed").getValDouble(), (int)Dawn.instance.settingsManager.getSettingByName("GuiGreen").getValDouble(), (int)Dawn.instance.settingsManager.getSettingByName("GuiBlue").getValDouble());
+		return new Color((int)Dawn.instance.settingsManager.getSettingByName("GuiRed").getValDouble(), 
+						 (int)Dawn.instance.settingsManager.getSettingByName("GuiGreen").getValDouble(), 
+						 (int)Dawn.instance.settingsManager.getSettingByName("GuiBlue").getValDouble());
 	}
 }
