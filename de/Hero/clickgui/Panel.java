@@ -39,7 +39,7 @@ public class Panel {
 		this.y = iy;
 		this.width = iwidth;
 		this.height = iheight;
-		this.extended = iextended;
+		this.extended = !iextended;
 		this.dragging = false;
 		this.visible = true;
 		this.clickgui = parent;
