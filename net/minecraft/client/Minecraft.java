@@ -2069,7 +2069,7 @@ public class Minecraft implements IThreadListener, ISnooperInfo
                 {
                 	//Dawn
                 	EventKey eventKey = new EventKey(i);
-                	eventKey.call();
+                	eventKey.call(); 
                 	
                     if (i == 1)
                     {
