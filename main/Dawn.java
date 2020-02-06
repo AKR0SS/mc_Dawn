@@ -28,9 +28,9 @@ public class Dawn {
 		clickGui = new ClickGUI();
 		
 		System.out.println("[" + Title + "] Starting . . . . . . ." + 
-				   "\n" + "v" + Version + 
-				   "\n" + "Created by " + Author);
-
+				   		   "\n" + "v" + Version + 
+				   		   "\n" + "Created by " + Author);
+		
 		Display.setTitle(Title + " v" + Version);
 		
 		eventManager.register(this);
