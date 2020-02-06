@@ -1911,7 +1911,7 @@ public class EntityRenderer implements IResourceManagerReloadListener
 
         //Dawn
         Event3D event3D = new Event3D(partialTicks);
-        event3D.call();
+        event3D.call(); 
         
         this.mc.mcProfiler.endStartSection("hand");
 
