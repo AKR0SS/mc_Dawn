@@ -260,7 +260,7 @@ public class EntityPlayerSP extends AbstractClientPlayer
             
                 //Dawn
                 EventPostMotionUpdate eventPostMotionUpdate = new EventPostMotionUpdate();
-                eventPostMotionUpdate.call();
+                eventPostMotionUpdate.call(); 
             }
         }
     }
