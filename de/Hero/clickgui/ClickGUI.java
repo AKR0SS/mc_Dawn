@@ -59,7 +59,7 @@ public class ClickGUI extends GuiScreen {
 		double pheight = 15;
 		double px = 10;
 		double py = 10;
-		double pyplus = pheight + 10;
+		double pyplus = pwidth + 10;
 		
 		/*
 		 * Zum Sortieren der Panels einfach die Reihenfolge im Enum ändern ;)
@@ -75,7 +75,7 @@ public class ClickGUI extends GuiScreen {
 							}
 						}
 			});
-			py += pyplus;
+			px += pyplus;
 		}
 		
 		/*
@@ -308,7 +308,6 @@ public class ClickGUI extends GuiScreen {
 		}
 	}
 
-	@Override
 	public void initGui() {
 		/*
 		 * Start blur
