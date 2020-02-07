@@ -10,6 +10,7 @@ import mc_Dawn.main.event.EventTarget;
 import mc_Dawn.main.event.events.EventUpdate;
 import mc_Dawn.main.modules.Category;
 import mc_Dawn.main.modules.Module;
+import net.minecraft.client.network.NetHandlerPlayClient;
 
 public class Fly extends Module {
 	String mode = Dawn.instance.settingsManager.getSettingByName("Fly Mode").getValString();
@@ -41,13 +42,14 @@ public class Fly extends Module {
 			mc.player.motionY = 0;
 			if(mc.player.ticksExisted % 3 == 0) {
 				y = mc.player.posY - 1.0E-10D;
-				//mc.player.tick
+				
+				//CPacketPlayerPosition
 			}
 			y1 = mc.player.posY + 1.0E-10D;
 			mc.player.setPosition(mc.player.posX, y1, mc.player.posZ);
 		}
 		
-		if(mode.equalsIgnoreCase("Vanilla")) 
+		if (mode.equalsIgnoreCase("Vanilla")) 
 			mc.player.capabilities.isFlying = true;
 	}
 	
