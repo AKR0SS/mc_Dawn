@@ -14,6 +14,7 @@ public class ModuleManager {
 		// MOVEMENT
 		modules.add(new Sprint()); //Key: Z
 		modules.add(new Step()); //Key: C
+		modules.add(new Fly());
 		
 		// PLAYER
 		
