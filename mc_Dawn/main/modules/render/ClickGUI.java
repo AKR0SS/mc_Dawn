@@ -23,9 +23,9 @@ public class ClickGUI extends Module {
 		
 		Dawn.instance.settingsManager.rSetting(new Setting("Design", this, "New", options));
 		
-		Dawn.instance.settingsManager.rSetting(new Setting("GuiRed", this, 255, 0, 0, true));
-		Dawn.instance.settingsManager.rSetting(new Setting("GuiGreen", this, 0, 255, 0, true));
-		Dawn.instance.settingsManager.rSetting(new Setting("GuiBlue", this, 0, 0, 255, true));
+		Dawn.instance.settingsManager.rSetting(new Setting("GuiRed", this, 255, 0, 255, true));
+		Dawn.instance.settingsManager.rSetting(new Setting("GuiGreen", this, 26, 0, 255, true));
+		Dawn.instance.settingsManager.rSetting(new Setting("GuiBlue", this, 42, 0, 255, true));
 	}
 	
 	@Override
