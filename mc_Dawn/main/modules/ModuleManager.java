@@ -3,6 +3,7 @@ package mc_Dawn.main.modules;
 import java.util.ArrayList;
 
 import mc_Dawn.main.modules.movement.*;
+import mc_Dawn.main.modules.player.*;
 import mc_Dawn.main.modules.render.*;
 
 public class ModuleManager {
@@ -17,6 +18,7 @@ public class ModuleManager {
 		modules.add(new Fly());
 		
 		// PLAYER
+		modules.add(new FreeCam());
 		
 		// RENDER
 		modules.add(new Fullbright()); //Key: X
