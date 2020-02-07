@@ -59,7 +59,7 @@ public class ClickGUI extends GuiScreen {
 		double pheight = 15;
 		double px = 10;
 		double py = 10;
-		double pyplus = pwidth + 10;
+		double pyplus = pwidth + 80;
 		
 		/*
 		 * Zum Sortieren der Panels einfach die Reihenfolge im Enum ändern ;)
