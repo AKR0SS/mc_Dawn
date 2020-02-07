@@ -9,7 +9,7 @@ import mc_Dawn.main.modules.Module;
 
 public class Step extends Module {
 	public Step() {
-		super("Step", Keyboard.KEY_C, Category.MOVEMENT);
+		super("Step", Keyboard.KEY_NONE, Category.MOVEMENT);
 	}
 	
 	@EventTarget

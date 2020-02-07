@@ -9,7 +9,7 @@ import mc_Dawn.main.modules.Module;
 
 public class Sprint extends Module {
 	public Sprint() {
-		super("Sprint", Keyboard.KEY_Z, Category.MOVEMENT);
+		super("Sprint", Keyboard.KEY_NONE, Category.MOVEMENT);
 	}
 	
 	@EventTarget
