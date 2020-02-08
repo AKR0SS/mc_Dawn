@@ -8,30 +8,53 @@ import mc_Dawn.main.modules.player.*;
 import mc_Dawn.main.modules.render.*;
 
 public class ModuleManager {
-	private ArrayList<Module> modules = new ArrayList<Module>();
+	private static ArrayList<Module> modules = new ArrayList<Module>();
 	
 	public ModuleManager() {
 		// COMBAT
 		
 		// MOVEMENT
-		modules.add(new Sprint()); //Key: Z
-		modules.add(new Step()); //Key: C
-		modules.add(new Fly());
+		addModule(new Sprint());
+		addModule(new Step());
+		addModule(new Fly());
 		
 		// PLAYER
-		modules.add(new FreeCam());
+		addModule(new FreeCam());
 		
 		// RENDER
-		modules.add(new Fullbright()); //Key: X
-		modules.add(new ChestESP());
+		addModule(new Fullbright());
+		addModule(new ChestESP());
 		
 		// MISC
-		modules.add(new ClickGUI()); //Key: Insert
+		addModule(new ClickGUI()); //Key: Insert
 	}
 	
+	public static void addModule(Module m) {
+		modules.add(m);
+	}
 	public ArrayList<Module> getModules() {
 		return modules;
 	}
+	
+	public static void onUpdate() {
+		for(Module m: modules) {
+			m.onUpdate();
+		}
+	}
+	public static void onRender() {
+		for(Module m: modules) {
+			m.onRender();
+		}
+	}
+	
+	public static void onKeyPressed(int k) {
+		for(Module m: modules) {
+			if(m.getKey() == k) {
+				m.toggle();
+			}
+		}
+	}
+	
 	public Module getModuleByName(String name) {
 		return modules.stream().filter(module -> module.getName().equalsIgnoreCase(name)).findFirst().orElse(null);
 	}
