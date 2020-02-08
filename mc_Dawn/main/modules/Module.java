@@ -23,6 +23,9 @@ public class Module {
 	public void onEnable() { Dawn.instance.eventManager.register(this);}
     public void onDisable() { Dawn.instance.eventManager.unregister(this);}
     
+    public void onUpdate() {}
+    public void onRender() {}
+    
     public void onToggle() {}
     public void toggle() {
         toggled = !toggled;
@@ -31,6 +34,9 @@ public class Module {
             onEnable();
         else
             onDisable();
+    }
+    public boolean isToggled() {
+    	return toggled;
     }
     
     public String getName() {
@@ -52,10 +58,6 @@ public class Module {
     }
     public void setCategory(Category category) {
         this.category = category;
-    }
-    
-    public boolean isToggled() {
-        return toggled;
     }
     
     public String getDisplayName() {
