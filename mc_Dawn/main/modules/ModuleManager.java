@@ -2,6 +2,7 @@ package mc_Dawn.main.modules;
 
 import java.util.ArrayList;
 
+import mc_Dawn.main.modules.misc.*;
 import mc_Dawn.main.modules.movement.*;
 import mc_Dawn.main.modules.player.*;
 import mc_Dawn.main.modules.render.*;
@@ -22,9 +23,10 @@ public class ModuleManager {
 		
 		// RENDER
 		modules.add(new Fullbright()); //Key: X
-		modules.add(new ClickGUI()); //Key: Insert
+		modules.add(new ChestESP());
 		
 		// MISC
+		modules.add(new ClickGUI()); //Key: Insert
 	}
 	
 	public ArrayList<Module> getModules() {
