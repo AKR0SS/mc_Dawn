@@ -2,6 +2,7 @@ package mc_Dawn.main.modules.movement;
 
 import org.lwjgl.input.Keyboard;
 
+import net.minecraft.client.network.NetHandlerHandshakeMemory;
 import mc_Dawn.main.event.EventTarget;
 import mc_Dawn.main.event.events.EventUpdate;
 import mc_Dawn.main.modules.Category;
@@ -14,7 +15,18 @@ public class Sprint extends Module {
 	
 	@EventTarget
 	public void onUpdate(EventUpdate event) {
-		if(!mc.player.isCollidedHorizontally && mc.player.moveForward > 0)
+		//ClientPlayerEntity player = mc.player;	
+			//bypass
+
+		/*
+		* if isSneaking,
+		*	 collidedHorizontally,
+		*	 isInWater
+		*
+		* 	 return;
+		*/
+
+		if(!((mc.player.moveForward) > 0))
 			mc.player.setSprinting(true);
 	}
 	
