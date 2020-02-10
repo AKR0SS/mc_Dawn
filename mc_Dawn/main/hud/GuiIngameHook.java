@@ -2,7 +2,6 @@ package mc_Dawn.main.hud;
 
 import mc_Dawn.main.Dawn;
 import mc_Dawn.main.modules.Module;
-import mc_Dawn.main.modules.ModuleManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiIngame;
@@ -14,7 +13,6 @@ public class GuiIngameHook extends GuiIngame {
 		super(mcIn);
 	}
 	
-	@Override
 	public void renderGameOverlay(float partialTicks) {
 		mc.fontRendererObj.drawString("Dawn Client", 900, 4, 0xFFCCFF);
 	
@@ -29,6 +27,7 @@ public class GuiIngameHook extends GuiIngame {
 		for(Module m: Dawn.instance.moduleManager.getModules()) {
 			if(m.isToggled()) {
 				mc.fontRendererObj.drawString(m.getName(), 4, 6 + (count*10), 0xFFCCFF);
+				count++;
 			}
 		}
 	}
