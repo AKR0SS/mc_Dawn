@@ -7,17 +7,18 @@ import net.minecraft.entity.player.EntityPlayer;
 public class FakePlayerEntity extends EntityOtherPlayerMP {
 	public FakePlayerEntity() {
 		super(Dawn_Minecraft.getWorld(), Dawn_Minecraft.getPlayer().getGameProfile());
+		
 		copyLocationAndAnglesFrom(Dawn_Minecraft.getPlayer());
 		
 		//Inventory Fix
-		inventory.copyInventory(Dawn_Minecraft.getPlayer().inventory);
-		getDataManager().set(EntityPlayer.PLAYER_MODEL_FLAG, Dawn_Minecraft.getPlayer().getDataManager().get(EntityPlayer.PLAYER_MODEL_FLAG));
+			inventory.copyInventory(Dawn_Minecraft.getPlayer().inventory);
+			getDataManager().set(EntityPlayer.PLAYER_MODEL_FLAG, Dawn_Minecraft.getPlayer().getDataManager().get(EntityPlayer.PLAYER_MODEL_FLAG));
 			
-			// fix rotation
+		// fix rotation
 			rotationYawHead = Dawn_Minecraft.getPlayer().rotationYawHead;
 			renderYawOffset = Dawn_Minecraft.getPlayer().renderYawOffset;
 			
-			// spawn
+		// spawn
 			Dawn_Minecraft.getWorld().addEntityToWorld(getEntityId(), this);
 		}
 		
