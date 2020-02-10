@@ -27,7 +27,7 @@ public class Dawn {
 		moduleManager = new ModuleManager();
 		clickGui = new ClickGUI();
 		
-		System.out.println("[" + Title + "] Starting . . . . . . ." + 
+		System.out.println("\n" + "[" + Title + "] Starting . . . . . . ." + 
 				   		   "\n" + "v" + Version + 
 				   		   "\n" + "Created by " + Author);
 		
